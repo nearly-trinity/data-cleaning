@@ -48,7 +48,7 @@ def spellCheck(word):
     if budget and word.upper() not in county_set:
         for keyword in county_list:
             if damerau_levenshtein_distance(word.lower(), keyword.lower()) <= budget:
-                # print("matched on " + keyword)
+                # print("corrected " + keyword)
                 return keyword.title()
 
     return word
